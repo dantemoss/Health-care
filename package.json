@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "echo 'Build completed'"
+    "build": "mkdir -p public && cp index.html styles.css script.js public/ && cp -r assets public/ 2>/dev/null || (mkdir public & copy index.html public\\ & copy styles.css public\\ & copy script.js public\\ & xcopy assets public\\assets\\ /E /I)"
   }
 } 
