@@ -1,8 +1,39 @@
 {
   "name": "health-care-landing",
   "version": "1.0.0",
-  "private": true,
+  "description": "Landing page de alta conversión para planes de salud con OSPADEP, Swiss Medical, Omint y Medifé",
+  "main": "index.html",
   "scripts": {
-    "build": "mkdir -p public && cp index.html styles.css script.js public/ && cp -r assets public/ 2>/dev/null || (mkdir public & copy index.html public\\ & copy styles.css public\\ & copy script.js public\\ & xcopy assets public\\assets\\ /E /I)"
-  }
+    "start": "serve -s . -l 3000",
+    "build": "mkdir -p public && cp index.html styles.css script.js public/ && cp -r assets public/",
+    "dev": "serve -s . -l 3000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "landing-page",
+    "healthcare",
+    "pipedrive",
+    "responsive",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Desarrollador",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dantemoss/Health-care.git"
+  },
+  "homepage": "https://github.com/dantemoss/Health-care#readme",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 } 
