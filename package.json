@@ -1,45 +1,8 @@
 {
   "name": "health-care-landing",
   "version": "1.0.0",
-  "description": "Landing page de alta conversión para planes de salud con OSPADEP, Swiss Medical, Omint y Medifé",
-  "main": "index.html",
+  "private": true,
   "scripts": {
-    "start": "npx serve . -l 8000",
-    "serve": "npx serve .",
-    "dev": "npx serve . -l 8000",
-    "build": "echo 'No build step required for static HTML'",
-    "test": "echo 'No tests specified'",
-    "lint": "echo 'No linting configured'"
-  },
-  "keywords": [
-    "landing-page",
-    "health-care",
-    "pipedrive",
-    "seo",
-    "responsive",
-    "argentina",
-    "planes-de-salud"
-  ],
-  "author": "Desarrollador",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/usuario/health-care-landing.git"
-  },
-  "bugs": {
-    "url": "https://github.com/usuario/health-care-landing/issues"
-  },
-  "homepage": "https://github.com/usuario/health-care-landing#readme",
-  "devDependencies": {
-    "serve": "^14.2.1"
-  },
-  "dependencies": {},
-  "engines": {
-    "node": ">=14.0.0"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+    "build": "echo 'Build completed'"
+  }
 } 
