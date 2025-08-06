@@ -1,0 +1,244 @@
+{
+    "task": "create_landing_page",
+    "description": "Create a high-conversion, SEO-optimized landing page for selling health plans from OSPADEP Salud, Swiss Medical, Omint, and Medifé in Argentina. The page must embed a Pipedrive web form using the provided embed code, be responsive, fast (load under 3 seconds), and follow best practices for design, SEO, and performance.",
+    "project_structure": {
+        "folder": "/health-landing-page",
+        "files": [
+            {
+                "name": "index.html",
+                "description": "Main HTML file containing the landing page structure with embedded Pipedrive form."
+            },
+            {
+                "name": "styles.css",
+                "description": "Custom CSS file for additional styling on top of Tailwind CSS, including styling for the Pipedrive form."
+            },
+            {
+                "name": "script.js",
+                "description": "JavaScript file for any additional interactivity, such as form submission feedback or analytics tracking."
+            },
+            {
+                "name": "assets/",
+                "description": "Folder containing logo images for OSPADEP Salud, Swiss Medical, Omint, and Medifé (e.g., logo-ospadep.png, logo-swiss-medical.png, logo-omint.png, logo-medife.png)."
+            }
+        ]
+    },
+    "design_requirements": {
+        "color_scheme": {
+            "primary": "blue-600",
+            "secondary": "white",
+            "accent": "green-200",
+            "description": "Use a professional, health-related color palette to convey trust."
+        },
+        "responsive": true,
+        "performance": {
+            "max_load_time": "3 seconds",
+            "image_optimization": {
+                "compression": true,
+                "file_names": [
+                    "logo-ospadep.png",
+                    "logo-swiss-medical.png",
+                    "logo-omint.png",
+                    "logo-medife.png"
+                ],
+                "alt_text": [
+                    "OSPADEP Salud logo",
+                    "Swiss Medical logo",
+                    "Omint logo",
+                    "Medifé logo"
+                ]
+            },
+            "css_minification": true
+        },
+        "sections": [
+            {
+                "name": "hero",
+                "position": "above_the_fold",
+                "components": [
+                    {
+                        "type": "h1",
+                        "content": "Elige el Mejor Plan de Salud con OSPADEP, Swiss Medical, Omint y Medifé",
+                        "seo": {
+                            "keyword": "planes de salud Argentina"
+                        }
+                    },
+                    {
+                        "type": "subtitle",
+                        "content": "Cobertura médica premium, personalizada para vos y tu familia en Argentina"
+                    },
+                    {
+                        "type": "form",
+                        "id": "pipedrive-webform",
+                        "embed_code": "<div class=\"pipedriveWebForms\" data-pd-webforms=\"https://webforms.pipedrive.com/f/bXxLOqGBjnIMD56x65m7GOu9udRvyuVVICsp2Uuqhrq2OTLdLhIgQROp6h682ObYZR\"><script src=\"https://webforms.pipedrive.com/f/loader\"></script></div>",
+                        "styling": {
+                            "container_class": "max-w-md mx-auto",
+                            "description": "Style the Pipedrive form to match the landing page's color scheme and ensure it is centered and responsive."
+                        },
+                        "cta_context": {
+                            "text": "Complete el formulario para cotizar su plan",
+                            "style": {
+                                "class": "text-sm text-gray-600 mt-2"
+                            }
+                        },
+                        "privacy_notice": "Tus datos están seguros con nosotros. Consulta nuestra <a href='/politica-de-privacidad'>política de privacidad</a>."
+                    }
+                ]
+            },
+            {
+                "name": "trust_section",
+                "components": [
+                    {
+                        "type": "h2",
+                        "content": "Confían en nosotros",
+                        "seo": {
+                            "keyword": "mejores prepagas médicas Argentina"
+                        }
+                    },
+                    {
+                        "type": "image_grid",
+                        "images": [
+                            {
+                                "src": "assets/logo-ospadep.png",
+                                "alt": "OSPADEP Salud"
+                            },
+                            {
+                                "src": "assets/logo-swiss-medical.png",
+                                "alt": "Swiss Medical"
+                            },
+                            {
+                                "src": "assets/logo-omint.png",
+                                "alt": "Omint"
+                            },
+                            {
+                                "src": "assets/logo-medife.png",
+                                "alt": "Medifé"
+                            }
+                        ],
+                        "style": {
+                            "class": "flex justify-center gap-6",
+                            "height": "h-12"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "benefits_section",
+                "components": [
+                    {
+                        "type": "h2",
+                        "content": "Por qué elegir nuestros planes de salud",
+                        "seo": {
+                            "keyword": "cobertura médica premium Argentina"
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            "Cobertura amplia con los mejores prestadores: OSPADEP, Swiss Medical, Omint y Medifé",
+                            "Atención personalizada para vos y tu familia",
+                            "Precios competitivos y planes flexibles",
+                            "Acceso a una red de clínicas y profesionales de primer nivel"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "seo_requirements": {
+        "title": "Planes de Salud Premium con OSPADEP, Swiss Medical, Omint y Medifé | Cotiza Ahora",
+        "meta_description": "Descubre los mejores planes de salud con OSPADEP, Swiss Medical, Omint y Medifé. Cobertura premium, atención personalizada. ¡Solicita tu cotización hoy!",
+        "meta_keywords": [
+            "planes de salud Argentina",
+            "OSPADEP Salud precios",
+            "Swiss Medical cotización",
+            "Omint planes",
+            "Medifé cobertura",
+            "mejor prepaga médica"
+        ],
+        "url": "/planes-de-salud-argentina",
+        "headings": {
+            "h1": "Elige el Mejor Plan de Salud con OSPADEP, Swiss Medical, Omint y Medifé",
+            "h2": [
+                "Confían en nosotros",
+                "Por qué elegir nuestros planes de salud"
+            ]
+        },
+        "content_length": {
+            "min_words": 300,
+            "max_words": 500
+        },
+        "local_seo": {
+            "location": "Buenos Aires, Argentina",
+            "keywords": [
+                "planes de salud en Buenos Aires",
+                "prepagas médicas cerca de mí"
+            ]
+        },
+        "technical_seo": {
+            "ssl": true,
+            "schema_markup": {
+                "type": "Service",
+                "properties": {
+                    "name": "Planes de Salud",
+                    "serviceType": "Seguros Médicos",
+                    "provider": "OSPADEP Salud, Swiss Medical, Omint, Medifé"
+                }
+            }
+        }
+    },
+    "pipedrive_integration": {
+        "method": "embedded_webform",
+        "embed_code": "<div class=\"pipedriveWebForms\" data-pd-webforms=\"https://webforms.pipedrive.com/f/bXxLOqGBjnIMD56x65m7GOu9udRvyuVVICsp2Uuqhrq2OTLdLhIgQROp6h682ObYZR\"><script src=\"https://webforms.pipedrive.com/f/loader\"></script></div>",
+        "customization": {
+            "styling": {
+                "description": "Ensure the Pipedrive form blends seamlessly with the landing page's design (match colors, fonts, and responsiveness). Add custom CSS in styles.css to adjust form width, button colors, and input field styles to align with the blue-600, white, and green-200 color scheme.",
+                "responsive": true
+            },
+            "success_feedback": {
+                "script": "Add JavaScript in script.js to detect form submission and display a success message: '¡Formulario enviado! Pronto te contactaremos.'"
+            }
+        }
+    },
+    "technical_requirements": {
+        "framework": "Tailwind CSS",
+        "cdn": "https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css",
+        "html_attributes": {
+            "lang": "es",
+            "charset": "UTF-8",
+            "viewport": "width=device-width, initial-scale=1.0"
+        },
+        "form_validation": {
+            "client_side": false,
+            "description": "Rely on Pipedrive's built-in form validation."
+        },
+        "analytics": {
+            "google_analytics": true,
+            "tag_manager": false
+        }
+    },
+    "additional_features": {
+        "privacy_policy_link": {
+            "text": "Política de Privacidad",
+            "url": "/politica-de-privacidad"
+        },
+        "a_b_testing": {
+            "variants": [
+                {
+                    "name": "with_video",
+                    "description": "Include a 1-minute video placeholder in the hero section"
+                },
+                {
+                    "name": "cta_variation",
+                    "description": "Add a secondary CTA text above the form: 'Solicita tu Cotización Gratis'"
+                }
+            ]
+        }
+    },
+    "output": {
+        "files_to_generate": [
+            "index.html",
+            "styles.css",
+            "script.js"
+        ],
+        "instructions": "Generate all necessary code, including HTML, CSS, and JavaScript. Embed the provided Pipedrive form code in the hero section. Style the form to match the landing page's design using Tailwind CSS and custom CSS in styles.css. Ensure the page is modular, maintainable, and optimized for performance and SEO. Include comments in the code to explain key sections. Simulate logo images in the assets folder. Test the form embedding locally to ensure it loads correctly and is responsive."
+    }
+}

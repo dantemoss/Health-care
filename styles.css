@@ -1,0 +1,444 @@
+/* Custom Styles for Health Care Landing Page */
+
+/* Typography improvements */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+}
+
+/* Pipedrive Form Styling */
+.pipedrive-form-container {
+    width: 100%;
+    max-width: 100%;
+    min-height: 400px;
+    position: relative;
+}
+
+/* Loading state for Pipedrive form - disabled by default */
+.pipedrive-form-container.loading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 4px solid #e5e7eb;
+    border-top: 4px solid #2563eb;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    z-index: 1;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Override Pipedrive form styles to match our design */
+.pipedriveWebForms {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-size: 16px !important;
+}
+
+/* Style Pipedrive form inputs */
+.pipedriveWebForms input[type="text"],
+.pipedriveWebForms input[type="email"],
+.pipedriveWebForms input[type="tel"],
+.pipedriveWebForms select,
+.pipedriveWebForms textarea {
+    border: 2px solid #e5e7eb !important;
+    border-radius: 0.75rem !important;
+    padding: 1rem 1.25rem !important;
+    font-size: 1rem !important;
+    font-family: 'Inter', sans-serif !important;
+    transition: all 0.2s ease-in-out !important;
+    background-color: #ffffff !important;
+    color: #374151 !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.pipedriveWebForms input[type="text"]:focus,
+.pipedriveWebForms input[type="email"]:focus,
+.pipedriveWebForms input[type="tel"]:focus,
+.pipedriveWebForms select:focus,
+.pipedriveWebForms textarea:focus {
+    outline: none !important;
+    border-color: #2563eb !important;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Style Pipedrive form buttons */
+.pipedriveWebForms button[type="submit"],
+.pipedriveWebForms input[type="submit"] {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 0.75rem !important;
+    padding: 1rem 1.5rem !important;
+    font-size: 1.125rem !important;
+    font-weight: 600 !important;
+    font-family: 'Inter', sans-serif !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease-in-out !important;
+    width: 100% !important;
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2) !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.pipedriveWebForms button[type="submit"]:hover,
+.pipedriveWebForms input[type="submit"]:hover {
+    background: linear-gradient(135deg, #1d4ed8, #1e40af) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 15px rgba(37, 99, 235, 0.3) !important;
+}
+
+.pipedriveWebForms button[type="submit"]:active,
+.pipedriveWebForms input[type="submit"]:active {
+    transform: translateY(0) !important;
+}
+
+/* Style Pipedrive form labels */
+.pipedriveWebForms label {
+    color: #374151 !important;
+    font-weight: 500 !important;
+    font-family: 'Inter', sans-serif !important;
+    margin-bottom: 0.5rem !important;
+    display: block !important;
+    font-size: 0.875rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+}
+
+/* Style Pipedrive form field containers */
+.pipedriveWebForms .pd-form-field {
+    margin-bottom: 1.5rem !important;
+}
+
+/* Form container styling */
+.form-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1.5rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive adjustments for Pipedrive form */
+@media (max-width: 768px) {
+    .pipedriveWebForms {
+        padding: 0 !important;
+    }
+    
+    .pipedriveWebForms input[type="text"],
+    .pipedriveWebForms input[type="email"],
+    .pipedriveWebForms input[type="tel"],
+    .pipedriveWebForms select,
+    .pipedriveWebForms textarea {
+        font-size: 16px !important; /* Prevents zoom on iOS */
+        padding: 0.875rem 1rem !important;
+    }
+    
+    .pipedriveWebForms button[type="submit"],
+    .pipedriveWebForms input[type="submit"] {
+        padding: 0.875rem 1.25rem !important;
+        font-size: 1rem !important;
+    }
+}
+
+/* Custom animations and transitions */
+.fade-in {
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom hover effects for cards */
+.benefit-card {
+    transition: all 0.3s ease-in-out;
+    transform: translateZ(0);
+}
+
+.benefit-card:hover {
+    transform: translateY(-8px) translateZ(0);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Gradient text effect */
+.gradient-text {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Custom button styles */
+.btn-primary {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+    color: white !important;
+    padding: 1rem 2rem !important;
+    border-radius: 0.75rem !important;
+    font-weight: 600 !important;
+    font-family: 'Inter', sans-serif !important;
+    transition: all 0.3s ease-in-out !important;
+    border: none !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    display: inline-block !important;
+    text-decoration: none !important;
+    min-height: 56px !important;
+    line-height: 1.5 !important;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 15px rgba(37, 99, 235, 0.3) !important;
+    background: linear-gradient(135deg, #1d4ed8, #1e40af) !important;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+/* Loading animation for form submission */
+.loading {
+    position: relative;
+    overflow: hidden;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* Success modal animations */
+.modal-enter {
+    animation: modalEnter 0.4s ease-out;
+}
+
+@keyframes modalEnter {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Print styles */
+@media print {
+    .pipedrive-form-container,
+    .btn-primary,
+    #successModal {
+        display: none !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .pipedriveWebForms input[type="text"],
+    .pipedriveWebForms input[type="email"],
+    .pipedriveWebForms input[type="tel"],
+    .pipedriveWebForms select,
+    .pipedriveWebForms textarea {
+        border-width: 3px !important;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Focus visible for better accessibility */
+.btn-primary:focus-visible,
+.pipedriveWebForms button[type="submit"]:focus-visible,
+.pipedriveWebForms input[type="submit"]:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+}
+
+/* Custom styles for trust section logos */
+.trust-logo {
+    transition: all 0.3s ease-in-out;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.trust-logo:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Responsive adjustments for logos */
+@media (max-width: 768px) {
+    .trust-logo {
+        max-width: 120px;
+        max-height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .trust-logo {
+        max-width: 100px;
+        max-height: 50px;
+    }
+}
+
+/* Hero section background pattern */
+.hero-pattern {
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+}
+
+/* Custom typography improvements */
+.text-balance {
+    text-wrap: balance;
+}
+
+/* Performance optimizations */
+.will-change-transform {
+    will-change: transform;
+}
+
+.will-change-opacity {
+    will-change: opacity;
+}
+
+/* Glass morphism effect for form container */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Enhanced form field styling */
+.form-field {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s ease-in-out;
+    background-color: #ffffff;
+    color: #374151;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #374151;
+} 
