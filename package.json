@@ -7,7 +7,7 @@
     "start": "npx serve . -l 8000",
     "serve": "npx serve .",
     "dev": "npx serve . -l 8000",
-    "build": "mkdir -p dist && cp -r * dist/ 2>/dev/null || xcopy /E /I . dist\\ 2>nul || echo 'Build completed'",
+    "build": "echo 'No build step required for static HTML'",
     "test": "echo 'No tests specified'",
     "lint": "echo 'No linting configured'"
   },
